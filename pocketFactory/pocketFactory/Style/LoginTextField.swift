@@ -10,12 +10,14 @@ import UIKit
 
 class LoginTextField: UITextField {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.cornerRadius = 10.0
     }
-    */
-
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 10, dy: 7)
+    }
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return textRect(forBounds: bounds)
+    }
 }

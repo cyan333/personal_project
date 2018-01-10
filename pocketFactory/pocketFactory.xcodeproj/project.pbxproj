@@ -13,6 +13,8 @@
 		919487492005B1A800600613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919487482005B1A800600613 /* Assets.xcassets */; };
 		9194874C2005B1A800600613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194874A2005B1A800600613 /* LaunchScreen.storyboard */; };
 		919487542005BB0C00600613 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487532005BB0C00600613 /* LoginTextField.swift */; };
+		919487592005BF8400600613 /* Utiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487582005BF8400600613 /* Utiles.swift */; };
+		9194875B2005C8C700600613 /* LoginBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194875A2005C8C700600613 /* LoginBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9194874B2005B1A800600613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9194874D2005B1A800600613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		919487532005BB0C00600613 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginTextField.swift; path = Style/LoginTextField.swift; sourceTree = "<group>"; };
+		919487582005BF8400600613 /* Utiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utiles.swift; path = Helper/Utiles.swift; sourceTree = "<group>"; };
+		9194875A2005C8C700600613 /* LoginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginBtn.swift; path = Style/LoginBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				919487532005BB0C00600613 /* LoginTextField.swift */,
+				9194875A2005C8C700600613 /* LoginBtn.swift */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		919487562005BB5200600613 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				919487582005BF8400600613 /* Utiles.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -164,8 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				919487542005BB0C00600613 /* LoginTextField.swift in Sources */,
+				919487592005BF8400600613 /* Utiles.swift in Sources */,
 				919487442005B1A800600613 /* ViewController.swift in Sources */,
 				919487422005B1A800600613 /* AppDelegate.swift in Sources */,
+				9194875B2005C8C700600613 /* LoginBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NK4455562X;
 				INFOPLIST_FILE = pocketFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fmning.pocketFactory;
@@ -317,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NK4455562X;
 				INFOPLIST_FILE = pocketFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fmning.pocketFactory;
