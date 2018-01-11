@@ -15,6 +15,7 @@
 		919487542005BB0C00600613 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487532005BB0C00600613 /* LoginTextField.swift */; };
 		919487592005BF8400600613 /* Utiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487582005BF8400600613 /* Utiles.swift */; };
 		9194875B2005C8C700600613 /* LoginBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194875A2005C8C700600613 /* LoginBtn.swift */; };
+		91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9A20070C48001367D5 /* RegisterTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		919487532005BB0C00600613 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginTextField.swift; path = Style/LoginTextField.swift; sourceTree = "<group>"; };
 		919487582005BF8400600613 /* Utiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utiles.swift; path = Helper/Utiles.swift; sourceTree = "<group>"; };
 		9194875A2005C8C700600613 /* LoginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginBtn.swift; path = Style/LoginBtn.swift; sourceTree = "<group>"; };
+		91DB4D9A20070C48001367D5 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterTextField.swift; path = Style/RegisterTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				919487532005BB0C00600613 /* LoginTextField.swift */,
 				9194875A2005C8C700600613 /* LoginBtn.swift */,
+				91DB4D9A20070C48001367D5 /* RegisterTextField.swift */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				919487542005BB0C00600613 /* LoginTextField.swift in Sources */,
 				919487592005BF8400600613 /* Utiles.swift in Sources */,
+				91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */,
 				919487442005B1A800600613 /* ViewController.swift in Sources */,
 				919487422005B1A800600613 /* AppDelegate.swift in Sources */,
 				9194875B2005C8C700600613 /* LoginBtn.swift in Sources */,
