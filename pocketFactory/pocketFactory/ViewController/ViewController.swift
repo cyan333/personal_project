@@ -8,18 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate  {
 
+    @IBOutlet var UsernameTextField: LoginTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.hideKeyboardWhenTappedAround()
+        self.UsernameTextField.delegate = self;
+        UsernameTextField.tag = 0 //Increment accordingly
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Try to find next responder
+        if let nextField = UsernameTextField.superview?.viewWithTag(UsernameTextField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            UsernameTextField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
+    }
 
 }
 

@@ -16,6 +16,7 @@
 		919487592005BF8400600613 /* Utiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487582005BF8400600613 /* Utiles.swift */; };
 		9194875B2005C8C700600613 /* LoginBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194875A2005C8C700600613 /* LoginBtn.swift */; };
 		91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9A20070C48001367D5 /* RegisterTextField.swift */; };
+		91DB4D9E2007EDE4001367D5 /* GetCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +27,11 @@
 		919487482005B1A800600613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9194874B2005B1A800600613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9194874D2005B1A800600613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		919487532005BB0C00600613 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginTextField.swift; path = Style/LoginTextField.swift; sourceTree = "<group>"; };
+		919487532005BB0C00600613 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginTextField.swift; path = Style/TextField/LoginTextField.swift; sourceTree = "<group>"; };
 		919487582005BF8400600613 /* Utiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utiles.swift; path = Helper/Utiles.swift; sourceTree = "<group>"; };
-		9194875A2005C8C700600613 /* LoginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginBtn.swift; path = Style/LoginBtn.swift; sourceTree = "<group>"; };
-		91DB4D9A20070C48001367D5 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterTextField.swift; path = Style/RegisterTextField.swift; sourceTree = "<group>"; };
+		9194875A2005C8C700600613 /* LoginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginBtn.swift; path = Style/Btn/LoginBtn.swift; sourceTree = "<group>"; };
+		91DB4D9A20070C48001367D5 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterTextField.swift; path = Style/TextField/RegisterTextField.swift; sourceTree = "<group>"; };
+		91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetCodeBtn.swift; path = Style/Btn/GetCodeBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,8 @@
 		919487552005BB3C00600613 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				919487532005BB0C00600613 /* LoginTextField.swift */,
-				9194875A2005C8C700600613 /* LoginBtn.swift */,
-				91DB4D9A20070C48001367D5 /* RegisterTextField.swift */,
+				91DB4DA02007EE39001367D5 /* Btn */,
+				91DB4D9F2007EE2F001367D5 /* TextField */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -98,6 +99,24 @@
 				919487432005B1A800600613 /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		91DB4D9F2007EE2F001367D5 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				91DB4D9A20070C48001367D5 /* RegisterTextField.swift */,
+				919487532005BB0C00600613 /* LoginTextField.swift */,
+			);
+			name = TextField;
+			sourceTree = "<group>";
+		};
+		91DB4DA02007EE39001367D5 /* Btn */ = {
+			isa = PBXGroup;
+			children = (
+				91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */,
+				9194875A2005C8C700600613 /* LoginBtn.swift */,
+			);
+			name = Btn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DB4D9E2007EDE4001367D5 /* GetCodeBtn.swift in Sources */,
 				919487542005BB0C00600613 /* LoginTextField.swift in Sources */,
 				919487592005BF8400600613 /* Utiles.swift in Sources */,
 				91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */,
