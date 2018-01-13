@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pocketFactory/ViewController/LoginViewController.swift"
+            timestampString = "537567993.477232"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "keyboardWillHide(notification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pocketFactory.LoginViewController.keyboardWillHide(notification: __ObjC.NSNotification) -&gt; ()"
+                  moduleName = "pocketFactory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Fangming/Documents/%E5%B7%A5%E5%8E%82app/personal_project/pocketFactory/pocketFactory/ViewController/LoginViewController.swift"
+                  timestampString = "537567876.410834"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in pocketFactory.LoginViewController.keyboardWillHide(notification: __ObjC.NSNotification) -&gt; ()"
+                  moduleName = "pocketFactory"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Fangming/Documents/%E5%B7%A5%E5%8E%82app/personal_project/pocketFactory/pocketFactory/ViewController/LoginViewController.swift"
+                  timestampString = "537567876.412734"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pocketFactory/ViewController/LoginViewController.swift"
+            timestampString = "537567993.477319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "keyboardWillShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

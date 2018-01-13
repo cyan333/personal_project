@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		919487422005B1A800600613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487412005B1A800600613 /* AppDelegate.swift */; };
-		919487442005B1A800600613 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487432005B1A800600613 /* ViewController.swift */; };
+		919487442005B1A800600613 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487432005B1A800600613 /* LoginViewController.swift */; };
 		919487472005B1A800600613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919487452005B1A800600613 /* Main.storyboard */; };
 		919487492005B1A800600613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919487482005B1A800600613 /* Assets.xcassets */; };
 		9194874C2005B1A800600613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194874A2005B1A800600613 /* LaunchScreen.storyboard */; };
@@ -17,12 +17,13 @@
 		9194875B2005C8C700600613 /* LoginBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194875A2005C8C700600613 /* LoginBtn.swift */; };
 		91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9A20070C48001367D5 /* RegisterTextField.swift */; };
 		91DB4D9E2007EDE4001367D5 /* GetCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */; };
+		91E2F4F42009B685000B5806 /* RegisterPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2F4F32009B685000B5806 /* RegisterPage1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9194873E2005B1A800600613 /* pocketFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pocketFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919487412005B1A800600613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		919487432005B1A800600613 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		919487432005B1A800600613 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		919487462005B1A800600613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		919487482005B1A800600613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9194874B2005B1A800600613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		9194875A2005C8C700600613 /* LoginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginBtn.swift; path = Style/Btn/LoginBtn.swift; sourceTree = "<group>"; };
 		91DB4D9A20070C48001367D5 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterTextField.swift; path = Style/TextField/RegisterTextField.swift; sourceTree = "<group>"; };
 		91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetCodeBtn.swift; path = Style/Btn/GetCodeBtn.swift; sourceTree = "<group>"; };
+		91E2F4F32009B685000B5806 /* RegisterPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 		919487572005BB9A00600613 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				919487432005B1A800600613 /* ViewController.swift */,
+				919487432005B1A800600613 /* LoginViewController.swift */,
+				91E2F4F32009B685000B5806 /* RegisterPage1ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -193,9 +196,10 @@
 			files = (
 				91DB4D9E2007EDE4001367D5 /* GetCodeBtn.swift in Sources */,
 				919487542005BB0C00600613 /* LoginTextField.swift in Sources */,
+				91E2F4F42009B685000B5806 /* RegisterPage1ViewController.swift in Sources */,
 				919487592005BF8400600613 /* Utiles.swift in Sources */,
 				91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */,
-				919487442005B1A800600613 /* ViewController.swift in Sources */,
+				919487442005B1A800600613 /* LoginViewController.swift in Sources */,
 				919487422005B1A800600613 /* AppDelegate.swift in Sources */,
 				9194875B2005C8C700600613 /* LoginBtn.swift in Sources */,
 			);
