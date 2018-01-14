@@ -10,43 +10,75 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate  {
 
-    @IBOutlet weak var UsernameTextField: LoginTextField!
-    @IBOutlet weak var PWTextField: LoginTextField!
-    @IBOutlet var ContentView: UIView!
-    
-    var originalY: CGFloat = 0
+    @IBOutlet weak var usernameTextField: LoginTextField!
+    @IBOutlet weak var passwordTextField: LoginTextField!
+    @IBOutlet var contentScrollView: UIScrollView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        self.UsernameTextField.delegate = self;
-        self.PWTextField.delegate = self;
-        self.UsernameTextField.tag = 1 //Increment accordingly
-        self.PWTextField.tag = 2
-        
-        originalY = ContentView.frame.origin.y;
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
+        self.usernameTextField.delegate = self;
+        self.passwordTextField.delegate = self;
+        self.usernameTextField.tag = 1 //Increment accordingly
+        self.passwordTextField.tag = 2
+ 
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
+        view.addGestureRecognizer(tapGesture)
     }
     deinit {
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addObservers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        removeObservers()
+    }
+    
+    @objc func didTapView(gesture: UITapGestureRecognizer){
+        //Hide keyboard for the view
+        view.endEditing(true)
+    }
+    
+    func addObservers(){
+        NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil){
+            notification in
+            self.keyboardWillShow(notification: notification)
+        }
+        NotificationCenter.default.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: nil){
+            notification in
+            self.keyboardWillHide(notification: notification)
+        }
+    }
+    func removeObservers(){
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        let YneedToBe = self.originalY - 100
-        if (self.ContentView.frame.origin.y != YneedToBe){
-            UIView.animate(withDuration: 0.5) {
-                self.ContentView.frame.origin.y = YneedToBe
-            }
+    func keyboardWillShow(notification: Notification){
+        guard let userInfo = notification.userInfo,
+            let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+                return
         }
+        let contentInset = UIEdgeInsetsMake(0, 0, frame.height, 0)
+        contentScrollView.contentInset = contentInset
     }
     
-    @objc func keyboardWillHide(notification: NSNotification) {
-        UIView.animate(withDuration: 0.5) {
-            self.ContentView.frame.origin.y = self.originalY;
+    func keyboardWillHide(notification: Notification){
+        contentScrollView.contentInset = UIEdgeInsets.zero
+    }
+    
+    
+    
+    
+    
+    //Disable horizontal scolling
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.x>0 {
+            scrollView.contentOffset.x = 0
         }
     }
     
@@ -56,19 +88,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Try to find next responder
         if textField.tag == 1 {
-            self.PWTextField.becomeFirstResponder()
+            self.passwordTextField.becomeFirstResponder()
         }
         else{
-            self.PWTextField.resignFirstResponder()
+            self.passwordTextField.resignFirstResponder()
         }
-        
-//        if let nextField = UsernameTextField.superview?.viewWithTag(UsernameTextField.tag + 1) as? UITextField {
-//            nextField.becomeFirstResponder()
-//        } else {
-//            // Not found, so remove keyboard.
-//            PWTextField.resignFirstResponder()
-//        }
-        // Do not add a line break
         return false
     }
 
