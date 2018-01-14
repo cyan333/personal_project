@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate  {
+class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate  {
 
     @IBOutlet weak var usernameTextField: LoginTextField!
     @IBOutlet weak var passwordTextField: LoginTextField!
@@ -25,6 +25,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
  
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
         view.addGestureRecognizer(tapGesture)
+        
+        self.contentScrollView.delegate = self
     }
     deinit {
     }
@@ -76,7 +78,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     
     
     //Disable horizontal scolling
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x>0 {
             scrollView.contentOffset.x = 0
         }
@@ -85,6 +87,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //Press return key to continute editing
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Try to find next responder
         if textField.tag == 1 {

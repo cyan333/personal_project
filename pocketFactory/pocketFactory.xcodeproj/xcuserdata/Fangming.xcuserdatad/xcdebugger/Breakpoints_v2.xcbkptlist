@@ -10,45 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pocketFactory/ViewController/LoginViewController.swift"
-            timestampString = "537589265.1993279"
+            timestampString = "537600923.364548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "scrollViewDidScroll(scrollView:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "keyboardWillShow(notification:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "pocketFactory.LoginViewController.keyboardWillHide(notification: __ObjC.NSNotification) -&gt; ()"
-                  moduleName = "pocketFactory"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Fangming/Documents/%E5%B7%A5%E5%8E%82app/personal_project/pocketFactory/pocketFactory/ViewController/LoginViewController.swift"
-                  timestampString = "537567876.410834"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in pocketFactory.LoginViewController.keyboardWillHide(notification: __ObjC.NSNotification) -&gt; ()"
-                  moduleName = "pocketFactory"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Fangming/Documents/%E5%B7%A5%E5%8E%82app/personal_project/pocketFactory/pocketFactory/ViewController/LoginViewController.swift"
-                  timestampString = "537567876.412734"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,13 +25,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "pocketFactory/ViewController/LoginViewController.swift"
-            timestampString = "537589265.199425"
+            filePath = "pocketFactory/ViewController/RegisterPage1ViewController.swift"
+            timestampString = "537600923.364929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "keyboardWillShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pocketFactory/ViewController/RegisterPage1ViewController.swift"
+            timestampString = "537600923.36519"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
