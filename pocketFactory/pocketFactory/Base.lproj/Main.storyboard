@@ -204,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqK-0l-2l4">
-                                        <rect key="frame" x="20" y="20" width="378" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZS-vT-5yU">
                                                 <rect key="frame" x="112" y="80" width="154" height="74"/>
@@ -270,10 +270,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mqK-0l-2l4" firstAttribute="top" secondItem="Te0-r8-Z38" secondAttribute="top" constant="20" id="HOL-Kr-Uy6"/>
-                                    <constraint firstItem="mqK-0l-2l4" firstAttribute="leading" secondItem="Te0-r8-Z38" secondAttribute="leading" constant="20" id="SAk-OP-2Yw"/>
-                                    <constraint firstAttribute="bottom" secondItem="mqK-0l-2l4" secondAttribute="bottom" constant="20" id="ZUs-xf-cLs"/>
-                                    <constraint firstAttribute="trailing" secondItem="mqK-0l-2l4" secondAttribute="trailing" constant="20" id="rny-ln-jC3"/>
+                                    <constraint firstItem="mqK-0l-2l4" firstAttribute="top" secondItem="Te0-r8-Z38" secondAttribute="top" id="HOL-Kr-Uy6"/>
+                                    <constraint firstItem="mqK-0l-2l4" firstAttribute="leading" secondItem="Te0-r8-Z38" secondAttribute="leading" id="SAk-OP-2Yw"/>
+                                    <constraint firstAttribute="bottom" secondItem="mqK-0l-2l4" secondAttribute="bottom" id="ZUs-xf-cLs"/>
+                                    <constraint firstAttribute="trailing" secondItem="mqK-0l-2l4" secondAttribute="trailing" id="rny-ln-jC3"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flx-9q-IDv" userLabel="Back">
