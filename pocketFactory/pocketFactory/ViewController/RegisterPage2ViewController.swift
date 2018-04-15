@@ -8,10 +8,10 @@
 
 import UIKit
 
-class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
-  
-    @IBOutlet var contentScrollView: UIScrollView!
+class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
     
+    
+    @IBOutlet var contentScrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -74,7 +74,8 @@ class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScro
             contentScrollView.contentOffset.x = 0
         }
     }
-
+    
+    
     
 }
 

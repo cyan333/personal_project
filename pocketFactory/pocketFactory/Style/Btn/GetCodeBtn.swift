@@ -13,7 +13,7 @@ class GetCodeBtn: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = 10.0
-        self.backgroundColor = UIColor(hexString: "E0E0DF")
+//        self.backgroundColor = UIColor(hexString: "494949")
         
     }
 
