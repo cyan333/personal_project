@@ -18,9 +18,13 @@
 		91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9A20070C48001367D5 /* RegisterTextField.swift */; };
 		91DB4D9E2007EDE4001367D5 /* GetCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */; };
 		91E2F4F42009B685000B5806 /* RegisterPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2F4F32009B685000B5806 /* RegisterPage1ViewController.swift */; };
+		E925B55793D376384F985625 /* Pods_pocketFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02AF3894155A3764CA3E9B82 /* Pods_pocketFactory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02AF3894155A3764CA3E9B82 /* Pods_pocketFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pocketFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA096DDF2BC7748E754E32A /* Pods-pocketFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketFactory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory.debug.xcconfig"; sourceTree = "<group>"; };
+		90012D10A879E60EA9DBA904 /* Pods-pocketFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketFactory.release.xcconfig"; path = "Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory.release.xcconfig"; sourceTree = "<group>"; };
 		9194873E2005B1A800600613 /* pocketFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pocketFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919487412005B1A800600613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919487432005B1A800600613 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E925B55793D376384F985625 /* Pods_pocketFactory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		376361150F84B5DF347BCD4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02AF3894155A3764CA3E9B82 /* Pods_pocketFactory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		919487352005B1A800600613 = {
 			isa = PBXGroup;
 			children = (
 				919487402005B1A800600613 /* pocketFactory */,
 				9194873F2005B1A800600613 /* Products */,
+				9827CB3AC863218120A68BDB /* Pods */,
+				376361150F84B5DF347BCD4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +137,15 @@
 			name = Btn;
 			sourceTree = "<group>";
 		};
+		9827CB3AC863218120A68BDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AA096DDF2BC7748E754E32A /* Pods-pocketFactory.debug.xcconfig */,
+				90012D10A879E60EA9DBA904 /* Pods-pocketFactory.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 919487502005B1A800600613 /* Build configuration list for PBXNativeTarget "pocketFactory" */;
 			buildPhases = (
+				33C47AD1DD059E5663D3885C /* [CP] Check Pods Manifest.lock */,
 				9194873A2005B1A800600613 /* Sources */,
 				9194873B2005B1A800600613 /* Frameworks */,
 				9194873C2005B1A800600613 /* Resources */,
+				57F3F29AF24ECEDC6487AB7D /* [CP] Embed Pods Frameworks */,
+				0005BF7831D95B1193241C89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +215,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0005BF7831D95B1193241C89 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33C47AD1DD059E5663D3885C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pocketFactory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57F3F29AF24ECEDC6487AB7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9194873A2005B1A800600613 /* Sources */ = {
@@ -336,6 +417,7 @@
 		};
 		919487512005B1A800600613 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA096DDF2BC7748E754E32A /* Pods-pocketFactory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -351,6 +433,7 @@
 		};
 		919487522005B1A800600613 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90012D10A879E60EA9DBA904 /* Pods-pocketFactory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
