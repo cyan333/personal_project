@@ -12,6 +12,21 @@ class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScro
   
     @IBOutlet var contentScrollView: UIScrollView!
     
+    @IBOutlet var regTextField: RegisterTextField!
+    
+    
+    @IBAction func nextBtn(_ sender: Any) {
+        print("dagds")
+        UserManager.checkRegistration(registrationCode: regTextField.text!) { (error) in
+            if error == "" {
+                self.performSegue(withIdentifier: "regToEmail", sender: nil)
+            }
+            else{
+                print(error)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()

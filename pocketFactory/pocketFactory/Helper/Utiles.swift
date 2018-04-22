@@ -9,6 +9,16 @@
 import Foundation
 import UIKit
 
+let serviceBase = "http://10.0.1.7:8080/factory/"
+
+//Error Msg
+let serviceOffline = "Service Offline"
+let serviceInternalError = "Internal Server Error"
+
+open class Utiles{
+    
+}
+
 extension UIColor {
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)

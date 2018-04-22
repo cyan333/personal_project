@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		916D2DB2208CC99100018CB6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D2DB1208CC99100018CB6 /* UserManager.swift */; };
 		9185275E208304E900F0D090 /* RegisterPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185275D208304E900F0D090 /* RegisterPage2ViewController.swift */; };
 		918527602083094C00F0D090 /* RegisterPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185275F2083094C00F0D090 /* RegisterPage3ViewController.swift */; };
 		919487422005B1A800600613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487412005B1A800600613 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 		02AF3894155A3764CA3E9B82 /* Pods_pocketFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pocketFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA096DDF2BC7748E754E32A /* Pods-pocketFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketFactory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory.debug.xcconfig"; sourceTree = "<group>"; };
 		90012D10A879E60EA9DBA904 /* Pods-pocketFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketFactory.release.xcconfig"; path = "Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory.release.xcconfig"; sourceTree = "<group>"; };
+		916D2DB1208CC99100018CB6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = WebService/UserManager.swift; sourceTree = "<group>"; };
 		9185275D208304E900F0D090 /* RegisterPage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2ViewController.swift; sourceTree = "<group>"; };
 		9185275F2083094C00F0D090 /* RegisterPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage3ViewController.swift; sourceTree = "<group>"; };
 		9194873E2005B1A800600613 /* pocketFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pocketFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		916D2DB0208CC93200018CB6 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				916D2DB1208CC99100018CB6 /* UserManager.swift */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
 		919487352005B1A800600613 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		919487402005B1A800600613 /* pocketFactory */ = {
 			isa = PBXGroup;
 			children = (
+				916D2DB0208CC93200018CB6 /* WebService */,
 				919487572005BB9A00600613 /* ViewController */,
 				919487562005BB5200600613 /* Helper */,
 				919487552005BB3C00600613 /* Style */,
@@ -289,6 +300,7 @@
 				91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */,
 				918527602083094C00F0D090 /* RegisterPage3ViewController.swift in Sources */,
 				919487442005B1A800600613 /* LoginViewController.swift in Sources */,
+				916D2DB2208CC99100018CB6 /* UserManager.swift in Sources */,
 				919487422005B1A800600613 /* AppDelegate.swift in Sources */,
 				9194875B2005C8C700600613 /* LoginBtn.swift in Sources */,
 			);

@@ -216,7 +216,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Please provide your manager code to indicate who you are reporting to" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nR3-hL-1YJ" userLabel="info">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Please provide your manager code to indicate who you are reporting to" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nR3-hL-1YJ" userLabel="info">
                                                 <rect key="frame" x="49" y="159" width="281" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="PXZ-1f-AkX"/>
@@ -225,7 +225,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="AXSGAEX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfX-qB-RcD" userLabel="ReportToTextField" customClass="RegisterTextField" customModule="pocketFactory" customModuleProvider="target">
+                                            <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="AXSGAEX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfX-qB-RcD" userLabel="RegTextField" customClass="RegisterTextField" customModule="pocketFactory" customModuleProvider="target">
                                                 <rect key="frame" x="39" y="350" width="302" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -284,7 +284,7 @@
                                 <rect key="frame" x="375" y="46" width="13" height="22"/>
                                 <state key="normal" image="forward"/>
                                 <connections>
-                                    <segue destination="iXg-VT-ZTx" kind="show" id="HPD-dQ-dye"/>
+                                    <action selector="nextBtn:" destination="LVj-Xn-Tsf" eventType="touchUpInside" id="DPT-XX-5pf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -306,11 +306,13 @@
                     </view>
                     <connections>
                         <outlet property="contentScrollView" destination="Te0-r8-Z38" id="FZF-Nb-G6n"/>
+                        <outlet property="regTextField" destination="KfX-qB-RcD" id="d6F-Rv-iVw"/>
+                        <segue destination="iXg-VT-ZTx" kind="show" identifier="regToEmail" id="iKt-GB-Nei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3h-Gg-Lea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="113.31521739130436"/>
+            <point key="canvasLocation" x="916" y="113"/>
         </scene>
         <!--RegisterPage2ViewController-->
         <scene sceneID="coi-nN-mv6">
@@ -338,7 +340,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Please provide your manager code to indicate who you are reporting to" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h7o-ow-aK4" userLabel="info">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Please provide your manager code to indicate who you are reporting to" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7o-ow-aK4" userLabel="info">
                                                 <rect key="frame" x="47" y="160" width="281" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="j6P-LR-Wt6"/>
@@ -510,7 +512,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Please provide your information here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NYV-ZV-MMT" userLabel="info">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Please provide your information here" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYV-ZV-MMT" userLabel="info">
                                                 <rect key="frame" x="47" y="147" width="281" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="LoL-AX-HvE"/>
@@ -652,7 +654,7 @@
         <image name="progress_bar_3" width="269" height="39"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4D9-nn-3nq"/>
-        <segue reference="qCx-sQ-gq9"/>
+        <segue reference="iKt-GB-Nei"/>
+        <segue reference="YsF-if-5UJ"/>
     </inferredMetricsTieBreakers>
 </document>
