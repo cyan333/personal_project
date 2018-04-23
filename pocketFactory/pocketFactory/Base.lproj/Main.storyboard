@@ -200,13 +200,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_pic_register_page" translatesAutoresizingMaskIntoConstraints="NO" id="VUt-JY-uga">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te0-r8-Z38">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqK-0l-2l4">
-                                        <rect key="frame" x="18" y="0.0" width="378" height="700"/>
+                                        <rect key="frame" x="18" y="20" width="378" height="700"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZS-vT-5yU">
                                                 <rect key="frame" x="112.66666666666666" y="80" width="153.99999999999997" height="74"/>
@@ -271,7 +271,7 @@
                                     <constraint firstItem="mqK-0l-2l4" firstAttribute="centerX" secondItem="Te0-r8-Z38" secondAttribute="centerX" id="QIF-mP-BkE"/>
                                     <constraint firstAttribute="trailing" secondItem="mqK-0l-2l4" secondAttribute="trailing" constant="18" id="Su7-hS-AQ0"/>
                                     <constraint firstAttribute="bottom" secondItem="mqK-0l-2l4" secondAttribute="bottom" constant="-33" id="nAB-pp-n6F"/>
-                                    <constraint firstItem="mqK-0l-2l4" firstAttribute="top" secondItem="Te0-r8-Z38" secondAttribute="top" id="nQf-ur-G1x"/>
+                                    <constraint firstItem="mqK-0l-2l4" firstAttribute="top" secondItem="Te0-r8-Z38" secondAttribute="top" constant="20" id="nQf-ur-G1x"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flx-9q-IDv" userLabel="Back">
@@ -291,17 +291,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VUt-JY-uga" firstAttribute="leading" secondItem="Te0-r8-Z38" secondAttribute="leading" id="CHC-Kx-4oB"/>
-                            <constraint firstItem="Te0-r8-Z38" firstAttribute="top" secondItem="VUt-JY-uga" secondAttribute="top" id="LM6-Cu-iNy"/>
+                            <constraint firstItem="VUt-JY-uga" firstAttribute="top" secondItem="AoL-i6-eIY" secondAttribute="top" id="3E1-cX-Fdl"/>
+                            <constraint firstItem="VUt-JY-uga" firstAttribute="leading" secondItem="4y8-rg-Uuh" secondAttribute="leading" id="CHC-Kx-4oB"/>
+                            <constraint firstItem="Te0-r8-Z38" firstAttribute="top" secondItem="AoL-i6-eIY" secondAttribute="top" id="LM6-Cu-iNy"/>
                             <constraint firstItem="4y8-rg-Uuh" firstAttribute="trailing" secondItem="GuB-mY-RQo" secondAttribute="trailing" constant="26" id="LZe-Ln-j6B"/>
-                            <constraint firstItem="VUt-JY-uga" firstAttribute="leading" secondItem="AoL-i6-eIY" secondAttribute="leading" id="NA7-Qc-CVp"/>
-                            <constraint firstItem="VUt-JY-uga" firstAttribute="trailing" secondItem="Te0-r8-Z38" secondAttribute="trailing" id="UZE-eT-UkA"/>
+                            <constraint firstItem="4y8-rg-Uuh" firstAttribute="bottom" secondItem="VUt-JY-uga" secondAttribute="bottom" id="TG9-Uz-84i"/>
+                            <constraint firstItem="VUt-JY-uga" firstAttribute="trailing" secondItem="4y8-rg-Uuh" secondAttribute="trailing" id="UZE-eT-UkA"/>
                             <constraint firstItem="flx-9q-IDv" firstAttribute="top" secondItem="4y8-rg-Uuh" secondAttribute="top" constant="26" id="kGh-cr-cbY"/>
                             <constraint firstItem="flx-9q-IDv" firstAttribute="top" secondItem="GuB-mY-RQo" secondAttribute="top" id="nwt-et-y5j"/>
                             <constraint firstAttribute="trailing" secondItem="Te0-r8-Z38" secondAttribute="trailing" id="tSa-yo-Xgu"/>
                             <constraint firstItem="flx-9q-IDv" firstAttribute="leading" secondItem="4y8-rg-Uuh" secondAttribute="leading" constant="26" id="u9s-Ct-s4R"/>
-                            <constraint firstItem="Te0-r8-Z38" firstAttribute="bottom" secondItem="VUt-JY-uga" secondAttribute="bottom" id="uWn-i2-WEI"/>
-                            <constraint firstItem="Te0-r8-Z38" firstAttribute="top" secondItem="AoL-i6-eIY" secondAttribute="top" id="xnM-oj-6kX"/>
+                            <constraint firstItem="Te0-r8-Z38" firstAttribute="bottom" secondItem="4y8-rg-Uuh" secondAttribute="bottom" id="uWn-i2-WEI"/>
+                            <constraint firstItem="Te0-r8-Z38" firstAttribute="leading" secondItem="AoL-i6-eIY" secondAttribute="leading" id="xMM-xb-oq4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4y8-rg-Uuh"/>
                     </view>
