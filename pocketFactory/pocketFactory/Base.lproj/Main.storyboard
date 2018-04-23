@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jxB-bX-1GK">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -180,6 +180,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="QmD-4w-ovf"/>
                     <connections>
                         <outlet property="contentScrollView" destination="8ub-VW-XYV" id="bEZ-wr-UbP"/>
                         <outlet property="passwordTextField" destination="C9e-af-bsW" id="6gg-sS-ZLL"/>
@@ -188,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1024.6376811594205" y="117.39130434782609"/>
         </scene>
         <!--RegisterPage1ViewController-->
         <scene sceneID="QTJ-Gr-fEa">
@@ -274,14 +275,14 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flx-9q-IDv" userLabel="Back">
-                                <rect key="frame" x="26" y="46" width="13" height="22"/>
+                                <rect key="frame" x="26" y="90" width="13" height="22"/>
                                 <state key="normal" image="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="69E-2e-zFR"/>
+                                    <segue destination="jxB-bX-1GK" kind="show" id="69E-2e-zFR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuB-mY-RQo" userLabel="Forward">
-                                <rect key="frame" x="375" y="46" width="13" height="22"/>
+                                <rect key="frame" x="375" y="90" width="13" height="22"/>
                                 <state key="normal" image="forward"/>
                                 <connections>
                                     <action selector="nextBtn:" destination="LVj-Xn-Tsf" eventType="touchUpInside" id="DPT-XX-5pf"/>
@@ -312,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3h-Gg-Lea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="113"/>
+            <point key="canvasLocation" x="1823.1884057971015" y="112.50000000000001"/>
         </scene>
         <!--RegisterPage2ViewController-->
         <scene sceneID="coi-nN-mv6">
@@ -444,14 +445,14 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvg-t8-Xok" userLabel="Back">
-                                <rect key="frame" x="26" y="46" width="13" height="22"/>
+                                <rect key="frame" x="26" y="90" width="13" height="22"/>
                                 <state key="normal" image="Back"/>
                                 <connections>
                                     <segue destination="LVj-Xn-Tsf" kind="show" id="qCx-sQ-gq9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IZ-9a-kZd" userLabel="Forward">
-                                <rect key="frame" x="375" y="46" width="13" height="22"/>
+                                <rect key="frame" x="375" y="90" width="13" height="22"/>
                                 <state key="normal" image="forward"/>
                                 <connections>
                                     <segue destination="dHr-Ss-PhO" kind="show" id="V3e-Hc-ceO"/>
@@ -481,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ear-3g-Jda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682.608695652174" y="113.31521739130436"/>
+            <point key="canvasLocation" x="2589.8550724637685" y="113.31521739130436"/>
         </scene>
         <!--RegisterPage3ViewController-->
         <scene sceneID="0p9-72-zOn">
@@ -606,14 +607,14 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFX-RG-nj0" userLabel="Back">
-                                <rect key="frame" x="26" y="46" width="13" height="22"/>
+                                <rect key="frame" x="26" y="90" width="13" height="22"/>
                                 <state key="normal" image="Back"/>
                                 <connections>
                                     <segue destination="iXg-VT-ZTx" kind="show" id="4D9-nn-3nq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BW-mA-vO2" userLabel="Forward">
-                                <rect key="frame" x="375" y="46" width="13" height="22"/>
+                                <rect key="frame" x="375" y="90" width="13" height="22"/>
                                 <state key="normal" image="forward"/>
                             </button>
                         </subviews>
@@ -640,7 +641,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vv-Xc-ItI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.5797101449275" y="113.31521739130436"/>
+            <point key="canvasLocation" x="3346.376811594203" y="113.31521739130436"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0fc-j7-oKx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jxB-bX-1GK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vNw-6R-jd1">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="89X-rK-eqO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVH-p8-vjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>

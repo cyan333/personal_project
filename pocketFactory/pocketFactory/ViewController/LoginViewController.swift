@@ -27,6 +27,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         view.addGestureRecognizer(tapGesture)
         
         self.contentScrollView.delegate = self
+        
+        //Set Bg color for navigation controller
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        //Set btn color
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
     }
     deinit {
     }
