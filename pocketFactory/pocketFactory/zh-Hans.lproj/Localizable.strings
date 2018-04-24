@@ -11,3 +11,5 @@
 "Email adress is not valid" = "无效邮箱地址";
 "The registration code does not exist" = "该注册码不存在";
 "Please enter the registration code" = "请输入注册码";
+"Service Offline" = "服务器已下线";
+"Internal Server Error" = "内部服务器错误";

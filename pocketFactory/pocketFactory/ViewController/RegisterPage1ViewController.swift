@@ -57,6 +57,8 @@ class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScro
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addObservers()
+        
+        regTextField.text = user.registrationCode
     }
     
     override func viewWillDisappear(_ animated: Bool) {

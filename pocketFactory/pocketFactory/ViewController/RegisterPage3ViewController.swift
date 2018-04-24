@@ -12,12 +12,38 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
     var user : User!
     @IBOutlet var contentScrollView: UIScrollView!
     
+    @IBOutlet var doneBtn: UIBarButtonItem!
     @IBOutlet var phoneTextfield: RegisterTextField!
     @IBOutlet var workID: RegisterTextField!
     @IBOutlet var nameTextfield: RegisterTextField!
     @IBOutlet var bdDatePicker: RegisterTextField!
     
     let datePicker = UIDatePicker()
+    
+    @IBAction func finishedReg(_ sender: Any) {
+        user.savedName = nameTextfield.text!
+        user.savedWorkID = workID.text!
+        
+        //Format birthday
+        user.savedBD = bdDatePicker.text!
+        
+        user.savedPhone = phoneTextfield.text!
+        UserManager.registerUser(regCode: user.registrationCode, email: user.savedEmail, pw: user.savedPW, name: user.savedName, workID: user.savedWorkID, birthday: user.savedBD+"T00:00:00Z", phone: user.savedPhone, rememberMe: user.rememberMe) { (error, accessToken, isActivated) in
+            
+            if error != "" {
+                Utiles.show(alertMessage: error, onViewController: self)
+            }
+            else {
+                self.user.accessToken = accessToken
+                if isActivated {
+                    print("activate: " , isActivated)
+                }
+                else {
+                    print("activate: " , isActivated)
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +69,11 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
         super.viewWillAppear(animated)
         addObservers()
 
+        workID.text = user.savedWorkID
+        nameTextfield.text = user.savedName
+        bdDatePicker.text = user.savedBD
+        phoneTextfield.text = user.savedPhone
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -112,9 +143,9 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
         
         //Format date
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
-        
+//        dateFormatter.dateStyle = .short
+//        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         //Add date to textfield
         bdDatePicker.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)

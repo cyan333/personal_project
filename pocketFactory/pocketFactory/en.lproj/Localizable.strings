@@ -10,3 +10,5 @@
 "Email adress is not valid" = "Email adress is not valid";
 "The registration code does not exist" = "The registration code does not exist";
 "Please enter the registration code" = "Please enter the registration code";
+"Service Offline" = "Service Offline";
+"Internal Server Error" = "Internal Server Error";

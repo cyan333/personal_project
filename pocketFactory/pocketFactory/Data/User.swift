@@ -16,6 +16,8 @@ class User {
     var savedWorkID: String
     var savedBD: String
     var savedPhone: String
+    var rememberMe: Bool
+    var accessToken: String
     
     init(registrationCode : String,
          savedEmail: String,
@@ -23,7 +25,9 @@ class User {
          savedName: String,
          savedWorkID: String,
          savedBD: String,
-         savedPhone: String) {
+         savedPhone: String,
+         rememberMe: Bool,
+         accessToken: String) {
         self.registrationCode = registrationCode
         self.savedEmail = savedEmail
         self.savedPW = savedPW
@@ -31,6 +35,8 @@ class User {
         self.savedWorkID = savedWorkID
         self.savedBD = savedBD
         self.savedPhone = savedPhone
+        self.rememberMe = rememberMe
+        self.accessToken = accessToken
     }
     
     init() {
@@ -41,6 +47,8 @@ class User {
         self.savedWorkID = ""
         self.savedBD = ""
         self.savedPhone = ""
+        self.rememberMe = true
+        self.accessToken = ""
     }
     
 }

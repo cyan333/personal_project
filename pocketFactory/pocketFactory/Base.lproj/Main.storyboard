@@ -393,13 +393,25 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A31-L4-xOo" userLabel="rememberMe">
+                                                <rect key="frame" x="120" y="531" width="135" height="22"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dpg-2D-BA3" userLabel="rememberMe">
+                                                <rect key="frame" x="265" y="527" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.75686274509803919" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="Dpg-2D-BA3" firstAttribute="leading" secondItem="A31-L4-xOo" secondAttribute="trailing" constant="10" id="2hI-Iu-09y"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u6T-RW-99i" secondAttribute="trailing" constant="20" symbolic="YES" id="8pQ-TI-BBf"/>
                                             <constraint firstItem="h7o-ow-aK4" firstAttribute="leading" secondItem="u6T-RW-99i" secondAttribute="leading" id="9vR-VU-bXv"/>
                                             <constraint firstItem="h7o-ow-aK4" firstAttribute="centerX" secondItem="exA-aN-2wj" secondAttribute="centerX" id="AaP-ai-0ON"/>
                                             <constraint firstItem="b5l-7Y-wq2" firstAttribute="top" secondItem="HZB-ri-jzh" secondAttribute="bottom" constant="53" id="Ap5-7U-JHw"/>
                                             <constraint firstItem="8yq-NS-J0u" firstAttribute="leading" secondItem="KdW-h7-5da" secondAttribute="leading" id="Ey3-fE-oqZ"/>
+                                            <constraint firstItem="A31-L4-xOo" firstAttribute="top" secondItem="b5l-7Y-wq2" secondAttribute="bottom" constant="30" id="GeW-fk-QrD"/>
                                             <constraint firstItem="8yq-NS-J0u" firstAttribute="top" secondItem="exA-aN-2wj" secondAttribute="bottom" constant="50" id="IH8-sf-PSQ"/>
                                             <constraint firstItem="8yq-NS-J0u" firstAttribute="leading" secondItem="Umn-na-Mj8" secondAttribute="leading" constant="37" id="Imv-Vq-VBz"/>
                                             <constraint firstItem="9W3-Sa-Ke9" firstAttribute="centerX" secondItem="h7o-ow-aK4" secondAttribute="centerX" id="QCb-bC-BVH"/>
@@ -409,10 +421,12 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HZB-ri-jzh" secondAttribute="trailing" constant="20" symbolic="YES" id="Z4n-tM-DTy"/>
                                             <constraint firstItem="exA-aN-2wj" firstAttribute="centerX" secondItem="8yq-NS-J0u" secondAttribute="centerX" id="Zw5-Tc-swb"/>
                                             <constraint firstItem="h7o-ow-aK4" firstAttribute="leading" secondItem="Umn-na-Mj8" secondAttribute="leading" constant="47" id="abi-uj-N2L"/>
+                                            <constraint firstItem="A31-L4-xOo" firstAttribute="centerX" secondItem="Umn-na-Mj8" secondAttribute="centerX" id="drR-7F-HQB"/>
                                             <constraint firstItem="KdW-h7-5da" firstAttribute="top" secondItem="8yq-NS-J0u" secondAttribute="bottom" constant="20" id="fkw-lZ-NbY"/>
                                             <constraint firstItem="8yq-NS-J0u" firstAttribute="trailing" secondItem="KdW-h7-5da" secondAttribute="trailing" id="gdx-Os-DRF"/>
                                             <constraint firstItem="HZB-ri-jzh" firstAttribute="top" secondItem="8yq-NS-J0u" secondAttribute="bottom" constant="25" id="iOe-zu-4h7"/>
                                             <constraint firstItem="KdW-h7-5da" firstAttribute="top" secondItem="u6T-RW-99i" secondAttribute="bottom" constant="53" id="jj5-Jg-ikk"/>
+                                            <constraint firstItem="Dpg-2D-BA3" firstAttribute="centerY" secondItem="A31-L4-xOo" secondAttribute="centerY" id="kJf-T7-uPp"/>
                                             <constraint firstItem="Egf-Es-22t" firstAttribute="top" secondItem="KdW-h7-5da" secondAttribute="bottom" constant="25" id="mR9-aF-iN9"/>
                                             <constraint firstItem="u6T-RW-99i" firstAttribute="leading" secondItem="HZB-ri-jzh" secondAttribute="leading" id="mg5-NU-7Za"/>
                                             <constraint firstItem="HZB-ri-jzh" firstAttribute="leading" secondItem="Egf-Es-22t" secondAttribute="leading" id="mhH-3j-dyS"/>
@@ -460,6 +474,7 @@
                         <outlet property="email" destination="8yq-NS-J0u" id="2Ru-xL-P50"/>
                         <outlet property="pwConfirmTextfield" destination="b5l-7Y-wq2" id="XLR-dK-bKU"/>
                         <outlet property="pwTextfield" destination="KdW-h7-5da" id="Nfz-Zh-DwB"/>
+                        <outlet property="rememberMe" destination="Dpg-2D-BA3" id="aW2-Rq-Txc"/>
                         <segue destination="dHr-Ss-PhO" kind="show" identifier="reg2ToReg3" id="vII-sm-KKJ"/>
                     </connections>
                 </viewController>
@@ -624,7 +639,11 @@
                         <viewLayoutGuide key="safeArea" id="PFq-j7-AvT"/>
                     </view>
                     <navigationItem key="navigationItem" id="OjB-Ek-L6c">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="forward" id="8mw-y9-Ra9"/>
+                        <barButtonItem key="rightBarButtonItem" title="finisheReg" image="forward" id="8mw-y9-Ra9">
+                            <connections>
+                                <action selector="finishedReg:" destination="dHr-Ss-PhO" id="q4s-AJ-w8B"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bdDatePicker" destination="GbL-Ou-ChR" id="iJh-s5-Xdh"/>

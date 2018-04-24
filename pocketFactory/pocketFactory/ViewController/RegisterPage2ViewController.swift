@@ -13,7 +13,9 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
     
     //Text Field
     @IBOutlet var email: RegisterTextField!
-   
+    //Switch
+    @IBOutlet var rememberMe: UISwitch!
+    
     
     @IBOutlet var pwTextfield: RegisterTextField!
     @IBOutlet var pwConfirmTextfield: RegisterTextField!
@@ -30,7 +32,6 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
                 //Then check if email exist
                 UserManager.checkUsername(userName: email.text!, completion: { (error) in
                     if error != "" {
-                        print(error)
                         Utiles.show(alertMessage: error, onViewController: self)
                     }
                     else {
@@ -68,7 +69,8 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
         super.viewWillAppear(animated)
         addObservers()
 
-        
+        email.text = user.savedEmail
+        rememberMe.isOn = user.rememberMe
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -130,12 +132,14 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
         if let destination = segue.destination as? RegisterPage3ViewController {
             user.savedEmail = email.text!
             user.savedPW = pwTextfield.text!
+            user.rememberMe = rememberMe.isOn
             destination.user = user
         }
     }
     
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         if let backDestination = viewController as? RegisterPage1ViewController {
+            user.rememberMe = rememberMe.isOn
             user.savedEmail = email.text!
             backDestination.user = user
         }

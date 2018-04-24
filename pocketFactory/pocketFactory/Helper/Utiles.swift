@@ -15,8 +15,8 @@ let serviceBase = "http://10.0.1.7:8080/factory/"
 let offlineMode = false
 
 //Error Msg
-let serviceOffline = "Service Offline"
-let serviceInternalError = "Internal Server Error"
+let serviceOffline = NSLocalizedString("Service Offline", comment: "")
+let serviceInternalError = NSLocalizedString("Internal Server Error", comment: "")
 
 
 
