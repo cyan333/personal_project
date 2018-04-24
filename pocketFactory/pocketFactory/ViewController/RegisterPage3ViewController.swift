@@ -8,21 +8,20 @@
 
 import UIKit
 
-class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
     var user : User!
     @IBOutlet var contentScrollView: UIScrollView!
     
+    @IBOutlet var phoneTextfield: RegisterTextField!
+    @IBOutlet var workID: RegisterTextField!
+    @IBOutlet var nameTextfield: RegisterTextField!
     @IBOutlet var bdDatePicker: RegisterTextField!
     
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(user.registrationCode)
-        print(user.savedEmail)
-        print(user.savedPW)
-        
+
         self.hideKeyboardWhenTappedAround()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
@@ -32,6 +31,8 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
         
         //Create date picker for birthday entry
         createDatePicker()
+        
+        self.navigationController?.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,6 +42,7 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addObservers()
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -118,6 +120,14 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
         self.view.endEditing(true)
     }
     
-    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        if let backDestination = viewController as? RegisterPage2ViewController {
+            user.savedName = nameTextfield.text!
+            user.savedPhone = phoneTextfield.text!
+            user.savedBD = bdDatePicker.text!
+            user.savedWorkID = workID.text!
+            backDestination.user = user
+        }
+    }
 }
 

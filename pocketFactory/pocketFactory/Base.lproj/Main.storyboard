@@ -629,6 +629,9 @@
                     <connections>
                         <outlet property="bdDatePicker" destination="GbL-Ou-ChR" id="iJh-s5-Xdh"/>
                         <outlet property="contentScrollView" destination="kWO-iC-s6b" id="7Xm-uz-iDH"/>
+                        <outlet property="nameTextfield" destination="0PE-sj-JGu" id="ODh-ec-zLm"/>
+                        <outlet property="phoneTextfield" destination="sK4-Dy-At2" id="guF-kF-Yc3"/>
+                        <outlet property="workID" destination="V5C-n3-nJV" id="YLo-A1-zlR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vv-Xc-ItI" userLabel="First Responder" sceneMemberID="firstResponder"/>

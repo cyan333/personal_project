@@ -62,6 +62,7 @@ extension UIColor {
     }
 }
 
+//Hide keyboard when tap around
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -73,5 +74,7 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+
 
 

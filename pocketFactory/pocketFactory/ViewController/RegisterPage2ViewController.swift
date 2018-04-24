@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
     var user : User!
     
     //Text Field
@@ -55,8 +55,9 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
         
         self.contentScrollView.delegate = self
         
-        //Init User
+        self.navigationController?.delegate = self
 
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,6 +67,8 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addObservers()
+
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -130,6 +133,14 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
             destination.user = user
         }
     }
-
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        if let backDestination = viewController as? RegisterPage1ViewController {
+            user.savedEmail = email.text!
+            backDestination.user = user
+        }
+    }
+    
 }
+
 

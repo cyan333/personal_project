@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, UINavigationControllerDelegate {
     var user : User!
     
     //Links from storyboard
@@ -47,6 +47,7 @@ class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScro
         
         //Init user
         user = User.init()
+        
     }
     
     override func didReceiveMemoryWarning() {
