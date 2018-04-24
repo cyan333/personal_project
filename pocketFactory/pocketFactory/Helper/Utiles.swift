@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 let serviceBase = "http://10.0.1.7:8080/factory/"
 
@@ -17,6 +18,28 @@ let serviceInternalError = "Internal Server Error"
 
 open class Utiles{
     
+    open class func show(alertMessage alert: String, onViewController vc: UIViewController) {
+        OperationQueue.main.addOperation{
+            let alert = UIAlertController(title: nil, message: alert, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            vc.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    open class func getRequest(toSubURL subURL: String, withJson json: [String: Any]) -> URLRequest {
+        var request = URLRequest(url: URL(string: serviceBase + subURL)!)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        request.httpBody = jsonData
+        
+        return request
+    }
+    
+    
+
 }
 
 extension UIColor {
@@ -49,7 +72,6 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    
 }
+
 

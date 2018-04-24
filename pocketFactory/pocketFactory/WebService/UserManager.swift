@@ -14,16 +14,8 @@ import Alamofire
 open class UserManager {
     
     open class func checkRegistration(registrationCode: String, completion: @escaping (_ error: String) -> Void) {
-        var request = URLRequest(url: URL(string: serviceBase + "validate_reg_code")!)
-        request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let json: [String: Any] = ["regCode": registrationCode] as [String : Any]
-        
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        
-        request.httpBody = jsonData
-        
+
+        let request = Utiles.getRequest(toSubURL: "validate_reg_code", withJson: ["regCode": registrationCode] as [String : Any])
         Alamofire.request(request).responseJSON { (response) in
             switch response.result{
             case .failure:
@@ -31,12 +23,41 @@ open class UserManager {
                 
             case .success(let data):
                 if let json = data as? [String : Any] {
-                    completion(json["errMsg"] as! String)
+                    if let error = json["errMsg"] as? String {
+                        completion(error)
+                    }
+                    else{
+                        completion("")
+                    }
                 }
                 else {
                     completion(serviceInternalError)
                 }
 
+            }
+        }
+    }
+    
+    open class func checkUsername(userName: String, completion: @escaping (_ error: String) -> Void) {
+        
+        let request = Utiles.getRequest(toSubURL: "check_username", withJson: ["username": userName] as [String : Any])
+        Alamofire.request(request).responseJSON { (response) in
+            switch response.result{
+            case .failure:
+                completion(serviceOffline)
+            case .success(let data):
+                if let json = data as? [String : Any] {
+                    if let error = json["errMsg"] as? String {
+                        completion(error)
+                    }
+                    else{
+                        completion("")
+                    }
+                }
+                else {
+                    completion(serviceInternalError)
+                }
+                
             }
         }
     }

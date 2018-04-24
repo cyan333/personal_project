@@ -9,18 +9,29 @@
 import UIKit
 
 class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
-    
+    var user : User!
     @IBOutlet var contentScrollView: UIScrollView!
     
+    @IBOutlet var bdDatePicker: RegisterTextField!
+    
+    let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(user.registrationCode)
+        print(user.savedEmail)
+        print(user.savedPW)
+        
         self.hideKeyboardWhenTappedAround()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
         view.addGestureRecognizer(tapGesture)
         
         self.contentScrollView.delegate = self
+        
+        //Create date picker for birthday entry
+        createDatePicker()
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,6 +53,7 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
         view.endEditing(true)
     }
     
+    //Move view with keyboard
     func addObservers(){
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil){
             notification in
@@ -76,6 +88,35 @@ class RegisterPage3ViewController: UIViewController, UITextFieldDelegate, UIScro
         }
     }
     
+    func createDatePicker() {
+        //Format date picker
+        datePicker.datePickerMode = .date
+        
+        
+        //Toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //Bar button item
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: false)
+        
+        //Assign date picker to text field
+        bdDatePicker.inputAccessoryView = toolbar
+        bdDatePicker.inputView = datePicker
+    }
+    
+    @objc func donePressed(){
+        
+        //Format date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        
+        //Add date to textfield
+        bdDatePicker.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
     
     
 }

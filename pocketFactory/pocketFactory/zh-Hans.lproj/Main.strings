@@ -1,0 +1,87 @@
+
+/* Class = "UITextField"; text = "Here"; ObjectID = "0PE-sj-JGu"; */
+"0PE-sj-JGu.text" = "Here";
+
+/* Class = "UILabel"; text = "BIRTHDAY"; ObjectID = "4ky-Qm-DN1"; */
+"4ky-Qm-DN1.text" = "BIRTHDAY";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "8mw-y9-Ra9"; */
+"8mw-y9-Ra9.title" = "Item";
+
+/* Class = "UITextField"; text = "sxie@wpi.edu"; ObjectID = "8yq-NS-J0u"; */
+"8yq-NS-J0u.text" = "sxie@wpi.edu";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "9W3-Sa-Ke9"; */
+"9W3-Sa-Ke9.text" = "Sign up";
+
+/* Class = "UITextField"; text = "Cyanxie"; ObjectID = "C9e-af-bsW"; */
+"C9e-af-bsW.text" = "Cyanxie";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "DQH-VE-FwF"; */
+"DQH-VE-FwF.text" = "PASSWORD";
+
+/* Class = "UILabel"; text = "CONFIRM PASSWORD"; ObjectID = "Egf-Es-22t"; */
+"Egf-Es-22t.text" = "CONFIRM PASSWORD";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "HZB-ri-jzh"; */
+"HZB-ri-jzh.text" = "PASSWORD";
+
+/* Class = "UITextField"; text = "AXSGAEX"; ObjectID = "KdW-h7-5da"; */
+"KdW-h7-5da.text" = "AXSGAEX";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "KfX-qB-RcD"; */
+"KfX-qB-RcD.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "Kob-8i-nMI"; */
+"Kob-8i-nMI.normalTitle" = "Register";
+
+/* Class = "UITextView"; text = "Please provide your information here"; ObjectID = "NYV-ZV-MMT"; */
+"NYV-ZV-MMT.text" = "Please provide your information here";
+
+/* Class = "UILabel"; text = "WORK ID"; ObjectID = "OcY-dB-SoH"; */
+"OcY-dB-SoH.text" = "WORK ID";
+
+/* Class = "UIButton"; normalTitle = "Forgot"; ObjectID = "Sin-gW-acK"; */
+"Sin-gW-acK.normalTitle" = "Forgot";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Unl-3t-Yaw"; */
+"Unl-3t-Yaw.normalTitle" = "Login";
+
+/* Class = "UITextField"; text = "AXSGAEX"; ObjectID = "b5l-7Y-wq2"; */
+"b5l-7Y-wq2.text" = "AXSGAEX";
+
+/* Class = "UILabel"; text = "USERNAME"; ObjectID = "gNx-7u-CjC"; */
+"gNx-7u-CjC.text" = "USERNAME";
+
+/* Class = "UIBarButtonItem"; title = "Continute"; ObjectID = "gTj-GY-KdP"; */
+"gTj-GY-KdP.title" = "Continute";
+
+/* Class = "UITextView"; text = "Please provide your manager code to indicate who you are reporting to"; ObjectID = "h7o-ow-aK4"; */
+"h7o-ow-aK4.text" = "Please provide your manager code to indicate who you are reporting to";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "iZS-vT-5yU"; */
+"iZS-vT-5yU.text" = "Sign up";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "icO-vf-CcY"; */
+"icO-vf-CcY.text" = "Sign up";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "m04-b7-7aw"; */
+"m04-b7-7aw.title" = "Item";
+
+/* Class = "UITextView"; text = "Please provide your manager code to indicate who you are reporting to"; ObjectID = "nR3-hL-1YJ"; */
+"nR3-hL-1YJ.text" = "Please provide your manager code to indicate who you are reporting to";
+
+/* Class = "UILabel"; text = "REGISTRATION CODE"; ObjectID = "rWz-3z-uB6"; */
+"rWz-3z-uB6.text" = "REGISTRATION CODE";
+
+/* Class = "UILabel"; text = "EMAIL OR PHONE"; ObjectID = "u6T-RW-99i"; */
+"u6T-RW-99i.text" = "EMAIL OR PHONE";
+
+/* Class = "UIButton"; normalTitle = "Demo"; ObjectID = "uBN-a8-jVf"; */
+"uBN-a8-jVf.normalTitle" = "Demo";
+
+/* Class = "UITextField"; text = "Cyan Xie"; ObjectID = "wCe-7X-uts"; */
+"wCe-7X-uts.text" = "Cyan Xie";
+
+/* Class = "UILabel"; text = "FIRST NAME"; ObjectID = "ylB-Or-LrW"; */
+"ylB-Or-LrW.text" = "FIRST NAME";

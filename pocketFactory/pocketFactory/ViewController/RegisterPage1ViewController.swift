@@ -9,22 +9,31 @@
 import UIKit
 
 class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
-  
+    var user : User!
+    
+    //Links from storyboard
     @IBOutlet var contentScrollView: UIScrollView!
     
     @IBOutlet var regTextField: RegisterTextField!
     
-    
     @IBAction func nextBtn(_ sender: Any) {
-        print("dagds")
-        UserManager.checkRegistration(registrationCode: regTextField.text!) { (error) in
-            if error == "" {
-                self.performSegue(withIdentifier: "regToEmail", sender: nil)
-            }
-            else{
-                print(error)
+        //Check if registration code text field is empty
+        if regTextField.text!.trimmingCharacters(in: .whitespaces) == "" {
+            Utiles.show(alertMessage: NSLocalizedString("Please enter the registration code", comment: ""), onViewController: self)
+        }
+        else {
+            //Check registration code
+            UserManager.checkRegistration(registrationCode: regTextField.text!) { (error) in
+                if error == "" {
+                    self.performSegue(withIdentifier: "regToEmail", sender: nil)
+                }
+                else{
+                    print(error)
+                    Utiles.show(alertMessage: error, onViewController: self)
+                }
             }
         }
+        
     }
     
     override func viewDidLoad() {
@@ -35,6 +44,9 @@ class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScro
         view.addGestureRecognizer(tapGesture)
         
         self.contentScrollView.delegate = self
+        
+        //Init user
+        user = User.init()
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,12 +93,20 @@ class RegisterPage1ViewController: UIViewController, UITextFieldDelegate, UIScro
     
     func keyboardWillHide(notification: Notification){
         contentScrollView.contentInset = UIEdgeInsets.zero
-    }
+    } 
     
     //Disable horizontal scolling
     func scrollViewDidScroll(_ contentScrollView: UIScrollView) {
         if contentScrollView.contentOffset.x>0 || contentScrollView.contentOffset.x < 0 {
             contentScrollView.contentOffset.x = 0
+        }
+    }
+    
+    //Pass registration code with segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? RegisterPage2ViewController {
+            user.registrationCode = regTextField.text!
+            destination.user = user
         }
     }
 

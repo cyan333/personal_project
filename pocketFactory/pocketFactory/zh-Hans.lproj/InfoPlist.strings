@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  pocketFactory
+
+  Created by NingFangming on 4/23/18.
+  Copyright © 2018 fangming. All rights reserved.
+*/
+
+CFBundleDisplayName = "爱工厂";

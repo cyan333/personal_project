@@ -9,17 +9,54 @@
 import UIKit
 
 class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+    var user : User!
     
+    //Text Field
+    @IBOutlet var email: RegisterTextField!
+   
+    
+    @IBOutlet var pwTextfield: RegisterTextField!
+    @IBOutlet var pwConfirmTextfield: RegisterTextField!
+    
+    @IBAction func nextBtn(_ sender: Any) {
+        //Check pw matching
+        if pwTextfield.text == pwConfirmTextfield.text {
+            //Then check email
+            if !validateEmail(enteredEmail: email.text!) {
+                Utiles.show(alertMessage: NSLocalizedString("Email adress is not valid", comment: ""), onViewController: self)
+
+            }
+            else {
+                //Then check if email exist
+                UserManager.checkUsername(userName: email.text!, completion: { (error) in
+                    if error != "" {
+                        print(error)
+                        Utiles.show(alertMessage: error, onViewController: self)
+                    }
+                    else {
+                        self.performSegue(withIdentifier: "reg2ToReg3", sender: nil)
+                    }
+                })
+            }
+        }
+        else {
+            Utiles.show(alertMessage: NSLocalizedString("Password does not match", comment: ""), onViewController: self)
+        }
+    }
     
     @IBOutlet var contentScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(gesture:)))
         view.addGestureRecognizer(tapGesture)
         
         self.contentScrollView.delegate = self
+        
+        //Init User
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,6 +97,7 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
             let frame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
                 return
         }
+        print(frame.height)
         let contentInset = UIEdgeInsetsMake(0, 0, frame.height, 0)
         contentScrollView.contentInset = contentInset
     }
@@ -75,7 +113,23 @@ class RegisterPage2ViewController: UIViewController, UITextFieldDelegate, UIScro
         }
     }
     
+    //Validate Email
+    func validateEmail(enteredEmail:String) -> Bool {
+        
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: enteredEmail)
+        
+    }
     
-    
+    //Pass registration code with segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? RegisterPage3ViewController {
+            user.savedEmail = email.text!
+            user.savedPW = pwTextfield.text!
+            destination.user = user
+        }
+    }
+
 }
 

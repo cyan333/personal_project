@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  pocketFactory
+
+  Created by NingFangming on 4/23/18.
+  Copyright © 2018 fangming. All rights reserved.
+*/
+
+
+"Password does not match" = "输入密码不匹配";
+"Email adress is not valid" = "无效邮箱地址";
+"The registration code does not exist" = "该注册码不存在";
+"Please enter the registration code" = "请输入注册码";

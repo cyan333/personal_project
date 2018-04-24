@@ -14,7 +14,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     @IBOutlet weak var passwordTextField: LoginTextField!
     @IBOutlet var contentScrollView: UIScrollView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -32,9 +31,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
+        self.navigationController?.view.backgroundColor = UIColor.yellow
         //Set btn color
         self.navigationController?.navigationBar.tintColor = UIColor.white
+
         
     }
     deinit {
@@ -43,6 +43,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addObservers()
+
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
