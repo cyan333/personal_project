@@ -10,11 +10,15 @@ import Foundation
 import UIKit
 import Alamofire
 
+//Server
 let serviceBase = "http://10.0.1.7:8080/factory/"
+let offlineMode = false
 
 //Error Msg
 let serviceOffline = "Service Offline"
 let serviceInternalError = "Internal Server Error"
+
+
 
 open class Utiles{
     

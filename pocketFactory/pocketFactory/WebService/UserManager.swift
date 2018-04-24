@@ -14,7 +14,10 @@ import Alamofire
 open class UserManager {
     
     open class func checkRegistration(registrationCode: String, completion: @escaping (_ error: String) -> Void) {
-
+        if offlineMode {
+            completion("")
+            return
+        }
         let request = Utiles.getRequest(toSubURL: "validate_reg_code", withJson: ["regCode": registrationCode] as [String : Any])
         Alamofire.request(request).responseJSON { (response) in
             switch response.result{
@@ -39,7 +42,10 @@ open class UserManager {
     }
     
     open class func checkUsername(userName: String, completion: @escaping (_ error: String) -> Void) {
-        
+        if offlineMode {
+            completion("")
+            return
+        }
         let request = Utiles.getRequest(toSubURL: "check_username", withJson: ["username": userName] as [String : Any])
         Alamofire.request(request).responseJSON { (response) in
             switch response.result{
