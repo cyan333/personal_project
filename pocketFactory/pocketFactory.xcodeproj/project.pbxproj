@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911106202093A7630079BA03 /* ManageMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9111061F2093A7630079BA03 /* ManageMainVC.swift */; };
 		911FE6CB208EACD300F58736 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911FE6C9208EACD300F58736 /* Localizable.strings */; };
 		911FE6D2208EB0F200F58736 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911FE6D4208EB0F200F58736 /* InfoPlist.strings */; };
 		911FE6DE208EDEFA00F58736 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FE6DD208EDEFA00F58736 /* User.swift */; };
 		916D2DB2208CC99100018CB6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D2DB1208CC99100018CB6 /* UserManager.swift */; };
-		9185275E208304E900F0D090 /* RegisterPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185275D208304E900F0D090 /* RegisterPage2ViewController.swift */; };
-		918527602083094C00F0D090 /* RegisterPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185275F2083094C00F0D090 /* RegisterPage3ViewController.swift */; };
+		9185275E208304E900F0D090 /* RegEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185275D208304E900F0D090 /* RegEmailVC.swift */; };
+		918527602083094C00F0D090 /* RegUserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9185275F2083094C00F0D090 /* RegUserInfoVC.swift */; };
 		919487422005B1A800600613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487412005B1A800600613 /* AppDelegate.swift */; };
-		919487442005B1A800600613 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487432005B1A800600613 /* LoginViewController.swift */; };
+		919487442005B1A800600613 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919487432005B1A800600613 /* LoginVC.swift */; };
 		919487472005B1A800600613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919487452005B1A800600613 /* Main.storyboard */; };
 		919487492005B1A800600613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919487482005B1A800600613 /* Assets.xcassets */; };
 		9194874C2005B1A800600613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194874A2005B1A800600613 /* LaunchScreen.storyboard */; };
@@ -23,7 +24,7 @@
 		9194875B2005C8C700600613 /* LoginBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194875A2005C8C700600613 /* LoginBtn.swift */; };
 		91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9A20070C48001367D5 /* RegisterTextField.swift */; };
 		91DB4D9E2007EDE4001367D5 /* GetCodeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */; };
-		91E2F4F42009B685000B5806 /* RegisterPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2F4F32009B685000B5806 /* RegisterPage1ViewController.swift */; };
+		91E2F4F42009B685000B5806 /* RegCodeSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2F4F32009B685000B5806 /* RegCodeSignUpVC.swift */; };
 		E925B55793D376384F985625 /* Pods_pocketFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02AF3894155A3764CA3E9B82 /* Pods_pocketFactory.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		02AF3894155A3764CA3E9B82 /* Pods_pocketFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pocketFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA096DDF2BC7748E754E32A /* Pods-pocketFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketFactory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory.debug.xcconfig"; sourceTree = "<group>"; };
 		90012D10A879E60EA9DBA904 /* Pods-pocketFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketFactory.release.xcconfig"; path = "Pods/Target Support Files/Pods-pocketFactory/Pods-pocketFactory.release.xcconfig"; sourceTree = "<group>"; };
+		9111061F2093A7630079BA03 /* ManageMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageMainVC.swift; sourceTree = "<group>"; };
 		911FE6CA208EACD300F58736 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		911FE6CE208EAE9100F58736 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		911FE6CF208EAE9200F58736 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -40,11 +42,11 @@
 		911FE6DB208EC04B00F58736 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		911FE6DD208EDEFA00F58736 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Data/User.swift; sourceTree = "<group>"; };
 		916D2DB1208CC99100018CB6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = WebService/UserManager.swift; sourceTree = "<group>"; };
-		9185275D208304E900F0D090 /* RegisterPage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2ViewController.swift; sourceTree = "<group>"; };
-		9185275F2083094C00F0D090 /* RegisterPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage3ViewController.swift; sourceTree = "<group>"; };
+		9185275D208304E900F0D090 /* RegEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegEmailVC.swift; sourceTree = "<group>"; };
+		9185275F2083094C00F0D090 /* RegUserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegUserInfoVC.swift; sourceTree = "<group>"; };
 		9194873E2005B1A800600613 /* pocketFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pocketFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919487412005B1A800600613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		919487432005B1A800600613 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		919487432005B1A800600613 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		919487462005B1A800600613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		919487482005B1A800600613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9194874B2005B1A800600613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		9194875A2005C8C700600613 /* LoginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginBtn.swift; path = Style/Btn/LoginBtn.swift; sourceTree = "<group>"; };
 		91DB4D9A20070C48001367D5 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterTextField.swift; path = Style/TextField/RegisterTextField.swift; sourceTree = "<group>"; };
 		91DB4D9D2007EDE4001367D5 /* GetCodeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetCodeBtn.swift; path = Style/Btn/GetCodeBtn.swift; sourceTree = "<group>"; };
-		91E2F4F32009B685000B5806 /* RegisterPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage1ViewController.swift; sourceTree = "<group>"; };
+		91E2F4F32009B685000B5806 /* RegCodeSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegCodeSignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +152,11 @@
 		919487572005BB9A00600613 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				919487432005B1A800600613 /* LoginViewController.swift */,
-				91E2F4F32009B685000B5806 /* RegisterPage1ViewController.swift */,
-				9185275D208304E900F0D090 /* RegisterPage2ViewController.swift */,
-				9185275F2083094C00F0D090 /* RegisterPage3ViewController.swift */,
+				919487432005B1A800600613 /* LoginVC.swift */,
+				91E2F4F32009B685000B5806 /* RegCodeSignUpVC.swift */,
+				9185275D208304E900F0D090 /* RegEmailVC.swift */,
+				9185275F2083094C00F0D090 /* RegUserInfoVC.swift */,
+				9111061F2093A7630079BA03 /* ManageMainVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -317,15 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9185275E208304E900F0D090 /* RegisterPage2ViewController.swift in Sources */,
+				9185275E208304E900F0D090 /* RegEmailVC.swift in Sources */,
 				91DB4D9E2007EDE4001367D5 /* GetCodeBtn.swift in Sources */,
 				919487542005BB0C00600613 /* LoginTextField.swift in Sources */,
-				91E2F4F42009B685000B5806 /* RegisterPage1ViewController.swift in Sources */,
+				91E2F4F42009B685000B5806 /* RegCodeSignUpVC.swift in Sources */,
 				919487592005BF8400600613 /* Utiles.swift in Sources */,
 				91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */,
 				911FE6DE208EDEFA00F58736 /* User.swift in Sources */,
-				918527602083094C00F0D090 /* RegisterPage3ViewController.swift in Sources */,
-				919487442005B1A800600613 /* LoginViewController.swift in Sources */,
+				911106202093A7630079BA03 /* ManageMainVC.swift in Sources */,
+				918527602083094C00F0D090 /* RegUserInfoVC.swift in Sources */,
+				919487442005B1A800600613 /* LoginVC.swift in Sources */,
 				916D2DB2208CC99100018CB6 /* UserManager.swift in Sources */,
 				919487422005B1A800600613 /* AppDelegate.swift in Sources */,
 				9194875B2005C8C700600613 /* LoginBtn.swift in Sources */,

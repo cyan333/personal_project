@@ -14,7 +14,7 @@ import Alamofire
 open class UserManager {
     
     open class func checkRegistration(registrationCode: String, completion: @escaping (_ error: String) -> Void) {
-        if offlineMode {
+        if demoMode {
             completion("")
             return
         }
@@ -42,7 +42,7 @@ open class UserManager {
     }
     
     open class func checkUsername(userName: String, completion: @escaping (_ error: String) -> Void) {
-        if offlineMode {
+        if demoMode {
             completion("")
             return
         }
@@ -77,7 +77,7 @@ open class UserManager {
                                  phone: String,
                                  rememberMe: Bool,
                                  completion: @escaping (_ error: String, _ accessToken: String, _ activated: Bool) -> Void) {
-        if offlineMode {
+        if demoMode {
             completion("", "", true)
             return
         }
