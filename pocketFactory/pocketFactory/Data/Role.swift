@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Role {
+open class Role {
     var name: String
     var positionLevel: Int
     var ownerName: String

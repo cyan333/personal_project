@@ -13,6 +13,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate  {
     @IBOutlet weak var usernameTextField: LoginTextField!
     @IBOutlet weak var passwordTextField: LoginTextField!
     @IBOutlet var contentScrollView: UIScrollView!
+    @IBOutlet weak var rememberMe: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,10 +83,6 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate  {
         contentScrollView.contentInset = UIEdgeInsets.zero
     }
     
-    
-    
-    
-    
     //Disable horizontal scolling
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x>0 {
@@ -108,6 +105,20 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate  {
         }
         return false
     }
+    
+    @IBAction func loginBtnClicked(_ sender: Any) {
+        
+        UserManager.userLogin(userName: usernameTextField.text!, password: passwordTextField.text!, rememberMe: (rememberMe != nil)) { (error, thisUser) in
+            if error == "" {
+                self.performSegue(withIdentifier: "loginToMain", sender: nil)
+            }
+            else {
+                Utiles.show(alertMessage: error, onViewController: self)
+            }
+        }
+        
+    }
+    
 
 }
 

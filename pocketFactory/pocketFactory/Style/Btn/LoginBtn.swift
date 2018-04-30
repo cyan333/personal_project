@@ -13,6 +13,7 @@ class LoginBtn: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = 10.0
+        self.backgroundColor = UIColor(hexString: "2183BB")
     }
 
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
+open class User {
     var registrationCode: String
     var savedEmail: String
     var savedPW: String
@@ -19,6 +19,10 @@ class User {
     var rememberMe: Bool
     var accessToken: String
     
+    var department: String
+    var position: String
+    var profileImage: Int
+    
     init(registrationCode : String,
          savedEmail: String,
          savedPW: String,
@@ -27,7 +31,11 @@ class User {
          savedBD: String,
          savedPhone: String,
          rememberMe: Bool,
-         accessToken: String) {
+         accessToken: String,
+         department: String,
+         position: String,
+         profileImage: Int) {
+        
         self.registrationCode = registrationCode
         self.savedEmail = savedEmail
         self.savedPW = savedPW
@@ -37,6 +45,9 @@ class User {
         self.savedPhone = savedPhone
         self.rememberMe = rememberMe
         self.accessToken = accessToken
+        self.department = department
+        self.position = position
+        self.profileImage = profileImage
     }
     
     init() {
@@ -49,6 +60,9 @@ class User {
         self.savedPhone = ""
         self.rememberMe = true
         self.accessToken = ""
+        self.department = ""
+        self.position = ""
+        self.profileImage = 1
     }
     
 }

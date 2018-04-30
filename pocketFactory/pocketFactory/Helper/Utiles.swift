@@ -12,7 +12,7 @@ import Alamofire
 
 //Server
 let serviceBase = "http://10.0.1.7:8080/factory/"
-let demoMode = true
+let demoMode = false
 
 //Error Msg
 let serviceOffline = NSLocalizedString("Service Offline", comment: "")
