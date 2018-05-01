@@ -30,36 +30,25 @@ open class UserManager {
                         completion(error, User())
                     }
                     else{
-                        if json["activated"] as! Bool {
-                            let thisUser = User(registrationCode: "",
-                                                savedEmail: userName,
-                                                savedPW: "",
-                                                savedName: json["name"] as! String,
-                                                savedWorkID: "",
-                                                savedBD: "",
-                                                savedPhone: json["phone"] as! String,
-                                                rememberMe: rememberMe,
-                                                accessToken: json["accessToken"] as! String,
-                                                department: "",
-                                                position: "",
-                                                profileImage: 0)
-                            if let birthday = json["birthday"] as? String {
-                                thisUser.savedBD = birthday
-                            }
-                            if let workId = json["workId"] as? String {
-                                thisUser.savedWorkID = workId
-                            }
-                            if let phone = json["phone"] as? String {
-                                thisUser.savedPhone = phone
-                            }
-                            if let profileImage = json["avatarId"] as? Int {
-                                thisUser.profileImage = profileImage
-                            }
-                            completion("",thisUser)
+                        let thisUser = User()
+                        thisUser.email = userName
+                        thisUser.fullName = json["name"] as! String
+                        thisUser.phone = json["phone"] as! String
+                        thisUser.rememberMe = rememberMe
+                        thisUser.accessToken = json["accessToken"] as! String
+                        if let birthday = json["birthday"] as? String {
+                            thisUser.birthday = birthday
                         }
-                        else {
-                            completion("Your account is not activated. Please contact your manager.", User())
+                        if let workId = json["workId"] as? String {
+                            thisUser.workID = workId
                         }
+                        if let phone = json["phone"] as? String {
+                            thisUser.phone = phone
+                        }
+                        if let profileImage = json["avatarId"] as? Int {
+                            thisUser.profileImage = profileImage
+                        }
+                        completion("",thisUser)
                     }
                 }
                 else {
@@ -126,16 +115,64 @@ open class UserManager {
     }
     
     open class func getUserList(limit: Int, offset: Int, completion: @escaping (_ error: String, _ userList: [User]) -> Void) {
-        let user1 = User()
-        user1.savedName = "谢珊珊"
-        user1.department = "ECE Department"
-        user1.position = "CEO"
-        let user2 = User()
-        user2.savedName = "宁方鸣"
-        user2.department = "CS Department"
-        user2.position = "扫厕所"
         
-        completion("",[user1,user2])
+        if demoMode {
+            let user1 = User()
+            user1.fullName = "谢珊珊"
+            user1.roleName = "CEO"
+            let user2 = User()
+            user2.fullName = "宁方鸣"
+            user2.roleName = "扫厕所"
+            completion("",[user1,user2])
+            return
+        }
+        let request = Utiles.getRequestWithAccessToken(toSubURL: "get_all_users", withJson: ["limit": limit, "offset": offset])
+        Alamofire.request(request).responseJSON { (response) in
+            switch response.result{
+            case .failure:
+                completion(serviceOffline, [User()])
+            case .success(let data):
+                if let json = data as? [String : Any] {
+                    if let error = json["errMsg"] as? String {
+                        completion(error, [User()])
+                    }
+                    else{
+                        let jsonList = json["userList"] as! [Any]
+                        var userList = [User]()
+                        for case let map as [String: Any] in jsonList {
+                            
+                            let user = User()
+                            user.userID = map["id"] as! Int
+                            user.isconfirmed = map["confirmed"] as! Bool
+                            user.isactivated = map["activated"] as! Bool
+                            user.fullName = map["name"] as! String
+                            user.roleName = map["roleName"] as! String
+                            if let phone = map["phone"] as? String {
+                                user.phone = phone
+                            }
+                            if let workID = map["workId"] as? String {
+                                user.workID = workID
+                            }
+                            if let profileImage = map["avatarId"] as? Int {
+                                user.profileImage = profileImage
+                            }
+                            if let birthday = map["birthday"] as? String {
+                                user.workID = birthday
+                            }
+                            if let joinDay = map["joinedDay"] as? String {
+                                user.workID = joinDay
+                            }
+                            userList.append(user)
+                        }
+                        completion("", userList)
+                    }
+                }
+                else {
+                    completion(serviceInternalError, [User()])
+                }
+                
+            }
+        }
         
     }
     
@@ -147,9 +184,9 @@ open class UserManager {
                                  birthday: String,
                                  phone: String,
                                  rememberMe: Bool,
-                                 completion: @escaping (_ error: String, _ accessToken: String, _ activated: Bool) -> Void) {
+                                 completion: @escaping (_ error: String, _ accessToken: String) -> Void) {
         if demoMode {
-            completion("", "", true)
+            completion("", "")
             return
         }
         let request = Utiles.getRequest(toSubURL: "register", withJson: ["regCode": regCode,
@@ -163,18 +200,18 @@ open class UserManager {
         Alamofire.request(request).responseJSON { (response) in
             switch response.result{
             case .failure:
-                completion(serviceOffline, "", false)
+                completion(serviceOffline, "")
             case .success(let data):
                 if let json = data as? [String : Any] {
                     if let error = json["errMsg"] as? String {
-                        completion(error, "", false)
+                        completion(error, "")
                     }
                     else{
-                        completion("", json["accessToken"] as! String, json["activated"] as! Bool)
+                        completion("", json["accessToken"] as! String)
                     }
                 }
                 else {
-                    completion(serviceInternalError, "", false)
+                    completion(serviceInternalError, "")
                 }
                 
             }

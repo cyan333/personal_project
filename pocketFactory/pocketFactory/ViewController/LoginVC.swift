@@ -110,6 +110,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate  {
         
         UserManager.userLogin(userName: usernameTextField.text!, password: passwordTextField.text!, rememberMe: (rememberMe != nil)) { (error, thisUser) in
             if error == "" {
+                currentUser = thisUser
                 self.performSegue(withIdentifier: "loginToMain", sender: nil)
             }
             else {

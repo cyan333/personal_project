@@ -12,13 +12,13 @@ import Alamofire
 
 //Server
 let serviceBase = "http://10.0.1.7:8080/factory/"
-let demoMode = true
+let demoMode = false
 
 //Error Msg
 let serviceOffline = NSLocalizedString("Service Offline", comment: "")
 let serviceInternalError = NSLocalizedString("Internal Server Error", comment: "")
 
-
+var currentUser: User?
 
 open class Utiles{
     
@@ -28,6 +28,13 @@ open class Utiles{
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             vc.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    open class func getRequestWithAccessToken(toSubURL subURL: String, withJson json: [String: Any]) -> URLRequest {
+        var thisJson = json
+        thisJson["accessToken"] = currentUser!.accessToken
+        
+        return getRequest(toSubURL:subURL, withJson:thisJson)
     }
     
     open class func getRequest(toSubURL subURL: String, withJson json: [String: Any]) -> URLRequest {
@@ -41,7 +48,6 @@ open class Utiles{
         
         return request
     }
-    
     
 
 }

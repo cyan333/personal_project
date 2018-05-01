@@ -69,7 +69,7 @@ class RegEmailVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, U
         super.viewWillAppear(animated)
         addObservers()
 
-        email.text = user.savedEmail
+        email.text = user.email
         rememberMe.isOn = user.rememberMe
     }
     
@@ -129,8 +129,8 @@ class RegEmailVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, U
     //Pass registration code with segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? RegUserInfoVC {
-            user.savedEmail = email.text!
-            user.savedPW = pwTextfield.text!
+            user.email = email.text!
+            user.password = pwTextfield.text!
             user.rememberMe = rememberMe.isOn
             destination.user = user
         }
@@ -139,7 +139,7 @@ class RegEmailVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate, U
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         if let backDestination = viewController as? RegCodeSignUpVC {
             user.rememberMe = rememberMe.isOn
-            user.savedEmail = email.text!
+            user.email = email.text!
             backDestination.user = user
         }
     }

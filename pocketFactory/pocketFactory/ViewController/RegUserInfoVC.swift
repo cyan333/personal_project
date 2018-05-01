@@ -21,26 +21,21 @@ class RegUserInfoVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate
     let datePicker = UIDatePicker()
     
     @IBAction func finishedReg(_ sender: Any) {
-        user.savedName = nameTextfield.text!
-        user.savedWorkID = workID.text!
         
-        //Format birthday
-        user.savedBD = bdDatePicker.text!
+        user.fullName = nameTextfield.text!
+        user.workID = workID.text!
+        user.birthday = bdDatePicker.text!
+        user.phone = phoneTextfield.text!
         
-        user.savedPhone = phoneTextfield.text!
-        UserManager.registerUser(regCode: user.registrationCode, email: user.savedEmail, pw: user.savedPW, name: user.savedName, workID: user.savedWorkID, birthday: user.savedBD+"T00:00:00Z", phone: user.savedPhone, rememberMe: user.rememberMe) { (error, accessToken, isActivated) in
+        UserManager.registerUser(regCode: user.registrationCode, email: user.email, pw: user.password, name: user.fullName, workID: user.workID, birthday: user.birthday+"T00:00:00Z", phone: user.phone, rememberMe: user.rememberMe) { (error, accessToken) in
             
             if error != "" {
                 Utiles.show(alertMessage: error, onViewController: self)
             }
             else {
                 self.user.accessToken = accessToken
-                if isActivated {
-                    print("activate: " , isActivated)
-                }
-                else {
-                    print("activate: " , isActivated)
-                }
+                currentUser = self.user
+                self.performSegue(withIdentifier: "registerToMain", sender: nil)
             }
         }
     }
@@ -69,10 +64,10 @@ class RegUserInfoVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate
         super.viewWillAppear(animated)
         addObservers()
 
-        workID.text = user.savedWorkID
-        nameTextfield.text = user.savedName
-        bdDatePicker.text = user.savedBD
-        phoneTextfield.text = user.savedPhone
+        workID.text = user.workID
+        nameTextfield.text = user.fullName
+        bdDatePicker.text = user.birthday
+        phoneTextfield.text = user.phone
         
     }
     
@@ -153,10 +148,10 @@ class RegUserInfoVC: UIViewController, UITextFieldDelegate, UIScrollViewDelegate
     
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         if let backDestination = viewController as? RegEmailVC {
-            user.savedName = nameTextfield.text!
-            user.savedPhone = phoneTextfield.text!
-            user.savedBD = bdDatePicker.text!
-            user.savedWorkID = workID.text!
+            user.fullName = nameTextfield.text!
+            user.phone = phoneTextfield.text!
+            user.birthday = bdDatePicker.text!
+            user.workID = workID.text!
             backDestination.user = user
         }
     }

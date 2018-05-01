@@ -13,7 +13,6 @@ class ManagePeopleProfileNameDepartmentCell: UITableViewCell {
     
     @IBOutlet var peopleProfileImage: UIImageView!
     @IBOutlet var peopleNameLabel: UILabel!
-    @IBOutlet var peopleDepartmentLabel: UILabel!
     @IBOutlet var peoplePositionLabel: UILabel!
 }
 
@@ -35,9 +34,15 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         
-        UserManager.getUserList(limit: 1, offset: 1) { (error, someUsers) in
-            self.userList = someUsers
-            self.manageTableView.reloadData()
+        UserManager.getUserList(limit: 100, offset: 0) { (error, someUsers) in
+            if error != "" {
+                Utiles.show(alertMessage: error, onViewController: self)
+            }
+            else {
+                self.userList = someUsers
+                self.manageTableView.reloadData()
+            }
+            
         }
         setupNavBar()
     }
@@ -66,9 +71,8 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         switch manageSegCtrl.selectedSegmentIndex {
         case 0:
             let managePeopleCell = tableView.dequeueReusableCell(withIdentifier: "ManagePeopleProfileNameDepartmentCell") as! ManagePeopleProfileNameDepartmentCell
-            managePeopleCell.peopleNameLabel?.text = userList[indexPath.row].savedName
-            managePeopleCell.peopleDepartmentLabel?.text = userList[indexPath.row].department
-            managePeopleCell.peoplePositionLabel?.text = userList[indexPath.row].position
+            managePeopleCell.peopleNameLabel?.text = userList[indexPath.row].fullName
+            managePeopleCell.peoplePositionLabel?.text = userList[indexPath.row].roleName
             return managePeopleCell
         case 1:
             break
