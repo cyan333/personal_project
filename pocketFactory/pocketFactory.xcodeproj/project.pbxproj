@@ -12,6 +12,8 @@
 		9111062B20965D7F0079BA03 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9111062A20965D7F0079BA03 /* ProductManager.swift */; };
 		9111062E20965DD50079BA03 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9111062D20965DD50079BA03 /* Product.swift */; };
 		9111063020965DF20079BA03 /* RoleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9111062F20965DF20079BA03 /* RoleManager.swift */; };
+		911106322097EDAF0079BA03 /* PeopleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911106312097EDAF0079BA03 /* PeopleDetailVC.swift */; };
+		911106342097EDBE0079BA03 /* RoleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911106332097EDBE0079BA03 /* RoleDetailVC.swift */; };
 		911FE6CB208EACD300F58736 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911FE6C9208EACD300F58736 /* Localizable.strings */; };
 		911FE6D2208EB0F200F58736 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911FE6D4208EB0F200F58736 /* InfoPlist.strings */; };
 		911FE6DE208EDEFA00F58736 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911FE6DD208EDEFA00F58736 /* User.swift */; };
@@ -41,6 +43,8 @@
 		9111062A20965D7F0079BA03 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductManager.swift; path = WebService/ProductManager.swift; sourceTree = "<group>"; };
 		9111062D20965DD50079BA03 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Data/Product.swift; sourceTree = "<group>"; };
 		9111062F20965DF20079BA03 /* RoleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleManager.swift; sourceTree = "<group>"; };
+		911106312097EDAF0079BA03 /* PeopleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailVC.swift; sourceTree = "<group>"; };
+		911106332097EDBE0079BA03 /* RoleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleDetailVC.swift; sourceTree = "<group>"; };
 		911FE6CA208EACD300F58736 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		911FE6CE208EAE9100F58736 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		911FE6CF208EAE9200F58736 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				9185275D208304E900F0D090 /* RegEmailVC.swift */,
 				9185275F2083094C00F0D090 /* RegUserInfoVC.swift */,
 				9111061F2093A7630079BA03 /* ManageMainVC.swift */,
+				911106312097EDAF0079BA03 /* PeopleDetailVC.swift */,
+				911106332097EDBE0079BA03 /* RoleDetailVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9111063020965DF20079BA03 /* RoleManager.swift in Sources */,
+				911106342097EDBE0079BA03 /* RoleDetailVC.swift in Sources */,
 				9111062B20965D7F0079BA03 /* ProductManager.swift in Sources */,
 				9111062920963ADA0079BA03 /* ManageMainVC.swift in Sources */,
 				9185275E208304E900F0D090 /* RegEmailVC.swift in Sources */,
@@ -350,6 +357,7 @@
 				91E2F4F42009B685000B5806 /* RegCodeSignUpVC.swift in Sources */,
 				919487592005BF8400600613 /* Utiles.swift in Sources */,
 				91DB4D9B20070C48001367D5 /* RegisterTextField.swift in Sources */,
+				911106322097EDAF0079BA03 /* PeopleDetailVC.swift in Sources */,
 				9111062E20965DD50079BA03 /* Product.swift in Sources */,
 				911FE6DE208EDEFA00F58736 /* User.swift in Sources */,
 				918527602083094C00F0D090 /* RegUserInfoVC.swift in Sources */,

@@ -83,7 +83,17 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+        switch manageSegCtrl.selectedSegmentIndex {
+        case 0:
+            return 70
+        case 1:
+            break
+        case 2:
+            return UITableViewAutomaticDimension
+        default:
+            break
+        }
+        return UITableViewAutomaticDimension
     }
     
     
