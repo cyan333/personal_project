@@ -120,9 +120,19 @@ open class UserManager {
             let user1 = User()
             user1.fullName = "谢珊珊"
             user1.roleName = "CEO"
+            user1.birthday = "3-24-1995"
+            user1.email = "sxie@wpi.edu"
+            user1.isconfirmed = true
+            user1.joinDay = "8/24/2014"
+            
             let user2 = User()
             user2.fullName = "宁方鸣"
             user2.roleName = "扫厕所"
+            user2.birthday = "1-4-1994"
+            user2.email = "fmning@wpi.edu"
+            user2.isconfirmed = false
+            user2.joinDay = "2/24/2014"
+            
             completion("",[user1,user2])
             return
         }
@@ -157,10 +167,10 @@ open class UserManager {
                                 user.profileImage = profileImage
                             }
                             if let birthday = map["birthday"] as? String {
-                                user.workID = birthday
+                                user.birthday = birthday
                             }
                             if let joinDay = map["joinedDay"] as? String {
-                                user.workID = joinDay
+                                user.joinDay = joinDay
                             }
                             userList.append(user)
                         }

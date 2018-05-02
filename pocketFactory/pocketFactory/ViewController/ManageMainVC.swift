@@ -28,6 +28,7 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     var userList = [User]()
     var roleList = [Role]()
+    var userFromMain = User()
     
     //Flags
     var loadingRoleList = false
@@ -100,7 +101,19 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return UITableViewAutomaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected", indexPath.row)
+        
+        userFromMain = userList[indexPath.row]
+        performSegue(withIdentifier: "peopleToPeopleDetail", sender: self)
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PeopleDetailVC {
+            destination.thisUser = userFromMain
+        }
+    }
     
     func setupNavBar() {
         let searchController = UISearchController(searchResultsController: nil)
