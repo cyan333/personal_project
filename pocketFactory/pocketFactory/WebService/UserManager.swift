@@ -118,7 +118,7 @@ open class UserManager {
         
         if demoMode {
             let user1 = User()
-            user1.fullName = "谢珊珊"
+            user1.fullName = "Shanshan Xie"
             user1.roleName = "CEO"
             user1.birthday = "3-24-1995"
             user1.email = "sxie@wpi.edu"
@@ -126,8 +126,8 @@ open class UserManager {
             user1.joinDay = "8/24/2014"
             
             let user2 = User()
-            user2.fullName = "宁方鸣"
-            user2.roleName = "扫厕所"
+            user2.fullName = "Fangming Ning"
+            user2.roleName = "Sofware Engineer"
             user2.birthday = "1-4-1994"
             user2.email = "fmning@wpi.edu"
             user2.isconfirmed = false

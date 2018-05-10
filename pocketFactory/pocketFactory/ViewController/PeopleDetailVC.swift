@@ -28,9 +28,7 @@ class PeopleDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return thisUserSubject.count
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let detailCell = tableView.dequeueReusableCell(withIdentifier: "PeopleDetailCell") as! PeopleDetailCell
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
         let detailCell = tableView.dequeueReusableCell(withIdentifier: "PeopleDetailCell") as! PeopleDetailCell
         
         detailCell.subjectLabel?.text = thisUserSubject[indexPath.row]
