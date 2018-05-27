@@ -1070,11 +1070,11 @@
             </objects>
             <point key="canvasLocation" x="1823" y="886"/>
         </scene>
-        <!--Manage-->
+        <!--Company-->
         <scene sceneID="cl1-cu-ftK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PJE-0X-Y5w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Manage" image="manage" selectedImage="manage" id="f8P-Oh-YEZ">
+                    <tabBarItem key="tabBarItem" title="Company" image="manage" selectedImage="manage" id="f8P-Oh-YEZ">
                         <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                     </tabBarItem>
                     <toolbarItems/>

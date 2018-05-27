@@ -17,19 +17,21 @@ class RoleDetailCell: UITableViewCell {
 
 class RoleDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var thisRole = Role()
+    var thisRole : Role!
     var thisRoleSubjectContent = [String]()
     var thisRoleSubject = [String]()
     
     override func viewDidLoad() {
         thisRoleSubjectContent = [thisRole.name,
-                                  thisRole.canCreateProduct.description,
-                                  thisRole.canCreateTask.description,
+                                  thisRole.canCreateProduct ? "Allowed" : "Not Allowed",
+                                  thisRole.department,
+                                  thisRole.canCreateTask ? "Allowed" : "Not Allowed",
                                   thisRole.ownerName,
                                   String(thisRole.positionLevel),
                                   thisRole.updateBy]
         thisRoleSubject = ["Role Name",
                            "Product Create",
+                           "Department",
                            "Task Create",
                            "Owner",
                            "Position",

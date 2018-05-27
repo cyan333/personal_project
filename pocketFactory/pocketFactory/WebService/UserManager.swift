@@ -140,11 +140,11 @@ open class UserManager {
         Alamofire.request(request).responseJSON { (response) in
             switch response.result{
             case .failure:
-                completion(serviceOffline, [User()])
+                completion(serviceOffline, [User]())
             case .success(let data):
                 if let json = data as? [String : Any] {
                     if let error = json["errMsg"] as? String {
-                        completion(error, [User()])
+                        completion(error, [User]())
                     }
                     else{
                         let jsonList = json["userList"] as! [Any]
@@ -178,7 +178,7 @@ open class UserManager {
                     }
                 }
                 else {
-                    completion(serviceInternalError, [User()])
+                    completion(serviceInternalError, [User]())
                 }
                 
             }

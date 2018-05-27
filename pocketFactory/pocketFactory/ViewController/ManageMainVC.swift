@@ -53,7 +53,6 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
         }
 
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -151,7 +150,8 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             performSegue(withIdentifier: "roleToRoleDetail", sender: self)
         default:
             break
-        } 
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -218,7 +218,7 @@ class ManageMainVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             else {
                 if !loadingRoleList {
                     self.loadingRoleList = true
-                    RoleManager.getRoleList(limit: 1, offset: 1) { (error, someRoles) in
+                    RoleManager.getRoleList(limit: 100, offset: 0) { (error, someRoles) in
                         self.roleList = someRoles
                         self.manageTableView.reloadData()
                     }

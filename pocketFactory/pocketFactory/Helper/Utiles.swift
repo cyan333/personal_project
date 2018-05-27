@@ -11,8 +11,8 @@ import UIKit
 import Alamofire
 
 //Server
-let serviceBase = "http://10.0.1.7:8080/factory/"
-let demoMode = true
+let serviceBase = "http://192.168.1.198:8080/factory/"
+let demoMode = false
 
 //Error Msg
 let serviceOffline = NSLocalizedString("Service Offline", comment: "")
@@ -31,7 +31,7 @@ open class Utiles{
     }
     
     open class func getRequestWithAccessToken(toSubURL subURL: String, withJson json: [String: Any]) -> URLRequest {
-        var thisJson = json
+        var thisJson = json 
         thisJson["accessToken"] = currentUser!.accessToken
         
         return getRequest(toSubURL:subURL, withJson:thisJson)
